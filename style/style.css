@@ -1,60 +1,206 @@
+:root {
+    --primary-color: #f44336;
+    --secondary-color:#ffff;
+    --tertiary-color: black;
+    --social-link-color: #666666;
+    --hover-color: #ccc;
+    --p-color: #757575;
+    --primary-font-family: 'Montserrat', sans-serif;
+    --secondary-font-family: 'Lato', sans-serif;
+    --primary-font-size: 18px;
+    --secondary-font-size: 36px;
+    --tertiary-font-size: 15px;
+    --start-font-size: 64px;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-.header {
-    display: flex;
-    background-color: #f44336;
-    /* padding: 10px; */
-    position: relative;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-}
-
-.home  {
-    background-color: white;
-    padding: 10px 20px;
-   position: absolute;
-   
-}
-
-.home a {
-    color: black;
-}
-
-nav {
-    width: 400px;
-    padding: 10px;
-    margin-left: 50px;
-}
-
-ul {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
+    font-family: var(--primary-font-family);
+    line-height: 1.5;
     
 }
 
-.nav-list a {
-    color: white;
+.container {
+    max-width: 980px;
+    margin: 0 auto;
 }
 
 
+/* *************NAVBAR************* */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    /* overflow: hidden; */
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
 
-.hero-container {
-    background-color: #f44336;
-    color: white;
-    height: 380px;
-    text-align: center;
+.navbar__list{
+    display: flex;
+    list-style: none;
+}
+
+.navbar__item {
+    display: block;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: var(--primary-font-size);
+    color: var(--secondary-color);
+}
+
+.navbar__item-active, .navbar__item:hover {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+}
+
+.navbar__item-active:hover {
+    background-color: var(--hover-color);
+}
+
+
+/* *************HEADER************* */
+.header {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    align-items: center;
+    gap: 24px;
+    padding: 128px 16px;
+    background-color: var(--primary-color);
+}
+
+.header__title {
+    font-size: var(--start-font-size);
+    color: var(--secondary-color);
+    font-weight: 400;
+}
+
+.header__text {
+    font-size: 24px;
+    font-family: var(--secondary-font-family);
+    color: var(--secondary-color);
+}
+
+.btn {
+    background: none;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--tertiary-color);
+    color: var(--secondary-color);
+}
+
+.btn-lg {
+    padding: 12px 24px;
+    font-size: var(--primary-font-size);
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+
+/* Main */
+.grey {
+    background-color: #f1f1f1;
+}
+
+.post {
+    display: flex;
+    padding: 64px 0;
+    
+}
+
+.post__text {
+    width: 66.666%;
+}
+
+.post__icon {
+    width: 33.333%;
+    text-align: center;
+    padding: 64px 0;
+    
+}
+
+.post h2 {
+    font-size: var(--secondary-font-size);
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.post h5 {
+    font-size: var(--primary-font-size);
+    font-family: var(--secondary-font-family);
+    font-weight: 400;
+    padding: 32px 0;
+    margin: 10x 0;
+}
+
+.post p {
+    font-size: var(--tertiary-font-size);
+    font-family: var(--secondary-font-family);
+    color: var(--p-color);
+    margin: 15px 0;
+}
+
+.post i {
+    font-size: 200px;
+    color: var(--primary-color);
+}
+
+.quote::before {
+    content: '';
+    display: table;
+    clear: both;
+    background-color: #000;
+}
+
+.qoute {
+    background-color: #000;
+    opacity: 0.60;
+    padding: 64px 0;
+    text-align: center;
+    
+}
+
+.qoute h3 {
+    margin: 16px 0;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+    padding: 64px 0;
+    
+}
+
+.social-icons {
+    padding: 32px 0;
+    text-align: center;
+    font-size: 24px;
+    opacity: 0.60;
+    color: #000;
+}
+
+
+footer p {
+    margin: 15px;
+    font-size: 15px;
+    text-align: center;
+    font-family: var(--secondary-font-family);
+    font-weight: 400;
+    opacity: 0.60;
+}
+
+footer a {
+    color: inherit;
+    font-family: var(--secondary-font-family);
+    font-weight: 400;
 }
 
 
